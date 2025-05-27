@@ -23,6 +23,7 @@ import EmailVerify from "./pages/EmailVerify";
 import Verify from "./pages/Verify";
 import ResetPassword from "./pages/ResetPassword";
 import AdminRoute from "./routes/AdminRoute";
+import Logout from "./pages/Logout";
 
 const MyRoutes = () => {
   return (
@@ -36,6 +37,7 @@ const MyRoutes = () => {
           <Route path="/emailverify" element={<EmailVerify />} />
           <Route path="/verify/:token" element={<Verify />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/forgetpassword" element={<ForgetPassword />} />
           <Route path="/forgetpassword/:token" element={<ResetPassword />} />
 

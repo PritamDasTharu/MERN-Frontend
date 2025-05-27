@@ -22,11 +22,13 @@ const Login = () => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data.user));
         localStorage.setItem("role", res.data?.user?.role);
-        if (res.data.user?.role == "1") {
-          navigate("/category/showcategory");
-        } else if (res.data.user?.role == "0") {
-          navigate("/");
-        }
+        setTimeout(() => {
+          if (res.data.user?.role == "1") {
+            navigate("/category/showcategory");
+          } else if (res.data.user?.role == "0") {
+            navigate("/");
+          }
+        }, 2000);
       })
       .catch((err) => {
         toast.error(err.data);
